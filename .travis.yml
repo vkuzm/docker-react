@@ -9,9 +9,9 @@ script:
     - docker run vkuzm/docker-react npm run test a -- --watchAll=false --coverage
 
 deploy:
-    provide: elasticbeanstalk
+    provider: elasticbeanstalk
     region: "us-east-1"
-    name: "docker-react"
+    app: "docker-react"
     env: "DockerReact-env"
     bucket_name: "elasticbeanstalk-us-east-1-964176841427"
     bucket_path: "docker-react"
